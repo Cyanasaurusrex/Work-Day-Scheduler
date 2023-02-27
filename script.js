@@ -44,32 +44,32 @@ function changeClass() {
       hourListfull[i].removeClass("past")
       hourListfull[i].addClass("future")
     }
-  }
-  // if the current hour is after 5pm but before midnight, sets all classes to "past"
-  if (now.format('H') > 17) {
+    // if the current hour is after 5pm but before midnight, sets all classes to "past"
+  } else if (now.format('H') > 17) {
     for (i = 0; i < hourlist.length; i++) {
       hourListfull[i].removeClass("present")
       hourListfull[i].removeClass("future")
       hourListfull[i].addClass("past")
-    }   
-  }
-  // loops through the hours to find the current hour and set its class to "present"
-  for (i = 0; i < hourlist.length; i++) {
-    if (now.format('h') == hourlist[i]) {
-      hourListfull[i].removeClass("past")
-      hourListfull[i].removeClass("future")      
-      hourListfull[i].addClass("present")
-      // for each preceding hour, set the class to "past"
-      for (j = 0; j < i; j ++){
-        hourListfull[j].removeClass("present")
-        hourListfull[j].removeClass("future")
-        hourListfull[j].addClass("past")
-      }
-      // for the remaining hours, set the class to "future"
-      for (k = (i + 1); k < hourlist.length; k++) {
-        hourListfull[k].removeClass("present")
-        hourListfull[k].removeClass("past")
-        hourListfull[k].addClass("future")      
+    } 
+  // loops through the hours to find the current hour and set its class to "present"    
+  } else {
+    for (i = 0; i < hourlist.length; i++) {
+      if (now.format('h') == hourlist[i]) {
+        hourListfull[i].removeClass("past")
+        hourListfull[i].removeClass("future")      
+        hourListfull[i].addClass("present")
+        // for each preceding hour, set the class to "past"
+        for (j = 0; j < i; j ++){
+          hourListfull[j].removeClass("present")
+          hourListfull[j].removeClass("future")
+          hourListfull[j].addClass("past")
+        }
+        // for the remaining hours, set the class to "future"
+        for (k = (i + 1); k < hourlist.length; k++) {
+          hourListfull[k].removeClass("present")
+          hourListfull[k].removeClass("past")
+          hourListfull[k].addClass("future")      
+        }
       }
     }
   }
