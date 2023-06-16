@@ -26,7 +26,7 @@ Users may use this application to input and save events throughout the workday. 
 
 Deployed application can be found here:
 
-[Work Day Scheduler](https://cyanasaurusrex.github.io/Work-Day-Scheduler/)
+[Work Day Scheduler](https://cyanasaurusrex.github.io/Work-Day-Scheduler/){:target="_blank"}
 
 ## Questions
 For any questions, contact me by email or on Github. Relevant links are listed below:
